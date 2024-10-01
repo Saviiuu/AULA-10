@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - Formulário</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cadastro">
+        <h1>Formulário e Cadastro</h1>
+        <br><br>
+        
+       <form action="">
+            <!--label for identifica o id do input 
+            name -> utilizado para associar com o js 
+            placeholder  exibe a informação a ser digitada
+            maxlenght -> tamanho da caixo da input
+            autofocus required -> curso sera posicionado no inicio do input-->
+
+            <!--Nome-->
+            <label for="lnome">Nome:</label>
+            <input type="text" id="lnome" name="inome" placeholder="Digite o seu nome..." maxlength="30" autofocus required>
+
+            <br><br>
+
+            <!--Data de Nascimento-->
+            <label for="ldtnasc">Data de Nascimento:</label>
+            <input type="date" name="idtnasc" id="ldtnasc" min="1950-01-01"  max="2000-01-01">
+
+            <br><br>
+
+            <!--Idade-->
+            <label for="lIdade">Idade: </label>
+            <input type="number" name="nIdade" id="lIdade" min="18" max="90">
+            <label for="lMaior">Maior de Idade: </label>
+            <input type="checkbox" name="iMaior" id="lMaior">
+
+            <br><br>
+
+            <!--Sexo-->
+            <label for="lSexo">Sexo: </label>
+            <input type="radio" name="iSexo" id="sexoF" value="F" checked> Feminino
+            <input type="radio" name="iSexo" id="sexoM" value="M" checked> Masculino
+
+            <br><br>
+
+            <!--Horário da Entrevista-->
+            <label for="lhorarioentrevista">Horário Entrevista: </label>
+            <input type="time" name="nhoraentrevista" id="ihorarioentrevista">
+
+            <br><br>
+
+            <!--Site Pessoal-->
+            <label for="lsitePessoal">Site Pessoal: </label>
+            <input type="url" name="iSitePessoal" id="lsitePessoal" value="ManoelGomes.com.br">
+
+            <br><br>
+
+            <!--Telefone-->
+            <label for="lTelefone">Telefone: </label>
+            <input type="tel" name="iTelefone" id="lTelefone"  placeholder="(00) 00000-0000" plapattern="[0-9] {2} - [0-9] {5} - [0-9] {4}">
+
+            <br><br>
+
+            <!--Tempo de Experiência-->
+            <label for="lTempoExp">Tempo de Experiência</label>
+            <input list="lTempoExp">
+                
+                <datalist id="lTempoExp">
+                    <option value="Menos de um ano"> Novato</option>
+                    <option value="Entre 2 a 5 anos">Pleno</option>
+                    <option value="Mais de 5 anos">Senior</option>
+                </datalist>
+                
+            
+            <br><br>
+            
+            <!--Data e Horário da Entrevista-->
+            <label for="lDataHorarioEntrevista">Data/Horário Entrevista: </label>
+            <input type="datetime-local" name="nDataHorarioEntrevista" id="lDataHorarioEntrevista">
+
+            <br><br>
+            <!--Email-->
+            <label for="lEmail">E-mail: </label>
+            <input type="email" name="nEmail" id="lEmail">
+
+            <br><br>
+            <!--Data Último Emprego-->
+            <label for="lDataUltEmp">Data do Último Emprego: </label>
+            <input type="month  " name="nUltimoEmp" id="lDataUltEmp">
+            
+            <br><br>
+            
+            <!--Conhecimento em Informática-->
+            <label for="lConhecimento">Conhecimento em Informática:</label>
+            <select name="nConhecimento" id="lConhecimento" size="3" multiple>
+                <option value="win">Windows</option>
+                <option value="word">Word</option>
+                <option value="excel">Excel</option>
+                <option value="html">HTML</option>
+            </select>
+
+            <br><br>   
+            
+            <!--Arquivo-->
+            <label for="lArquivo">Arquivc:  </label>
+            <input type="file" name="nArquivo" id="lArquivo" accept=".docx">
+
+            <br><br>
+
+            <!--Cor-->
+            <label for="lCor">Selecione uma Cor: </label>
+            <input type="color" name="nCor" id="lCor">  
+
+            <br><br>
+
+            <label for="lSenha">Digite a Senha: </label>
+            <input type="password" name="nSenha" id="lSenha">
+
+            <br><br>
+
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+
+        </form>
+    </div>
+</body> 
+
+
+</html>
